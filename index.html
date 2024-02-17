@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,140 @@
     <title>Smart Ticketing</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind custom class -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#1DD100',
+                        'btn-background': 'rgba(29, 209, 0, 0.10)',
+                        // 'batch-primary': 'rgba(255, 255, 255, 0.60)',
+                        'para-primary': 'rgba(3, 7, 18, 0.60)',
+                        // 'border-primary': 'rgba(19, 19, 24, 0.10)',
+
+
+
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-<script src="scripts/utility.js"></script>
-<script src="scripts/ticketing.js"></script>
+    <header>
+        <nav class="container mx-auto my-1 lg:my-8 lg:px-18 px-4">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-inter para-primary font-medium text-lg">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost  text-black  lg:font-extrabold text-2xl lg:text-4xl">F-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex font-inter para-primary font-medium text-lg">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn text-primary-color bg-btn-background border-[#1DD10066] lg:px-7 ">Bus <img
+                            src="./images/bus-icon.png" alt=""></a>
+                </div>
+            </div>
+        </nav>
+        <!-- Banner section -->
+        <section class="container mx-auto mt-2 lg:my-9 lg:px-18 px-4  ">
+            <div class="relative">
+                <div class="hero h-[550px] rounded-3xl"
+                    style="background-image: url('./images/banner.png'),linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%);">
+                    <!-- <div class="hero-overlay  bg-opacity-50 rounded-3xl"></div> -->
+                    <div class="hero-content text-center text-neutral-content">
+                        <div class="max-w-3xl">
+                            <h1 class="mb-5 text-4xl lg:text-6xl text-white font-extrabold">End-to-End Travel with</h1>
+                            <h1 class="mb-5 text-4xl lg:text-6xl text-primary-color font-extrabold">F Paribahan</h1>
+                            <p class="mb-5 text-white font-inter text-sm lg:text-lg font-normal">Book Your Ride in a
+                                Click! Easy, Fast, and Secure Bus Ticketing. Explore Routes, Grab Deals, and Travel
+                                Hassle-Free Today!</p>
+                            <button
+                                class="btn bg-primary-color border-none text-black font-bold text-base lg:text-xl px-7 ">Buy
+                                Tickets</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- banner top card large -->
+                <div class="hidden lg:flex w-3/4 justify-around  absolute -bottom-16 left-40 ">
+                    <div class="flex gap-4 max-w-80 py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                        <img src="./images/people.png" alt="">
+                        <div>
+                            <h3 class="text-4xl font-bold text-black mb-2">500K+</h3>
+                            <p class="text-para-primary text-lg font-normal">Registered users</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 max-w-80 py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                        <img src="./images/ticket-cupon.png" alt="">
+                        <div>
+                            <h3 class="text-4xl font-bold text-black mb-2">1.7 lacks</h3>
+                            <p class="text-para-primary text-lg font-normal">Tickets sold</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 max-w-80 py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                        <img src="./images/stoppage.png" alt="">
+                        <div>
+                            <h3 class="text-4xl font-bold text-black mb-2">80K+</h3>
+                            <p class="text-para-primary text-lg font-normal">Rental partners</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <!-- banner top card small -->
+            <div class="lg:hidden flex flex-col gap-4  my-4   ">
+                <div class="flex gap-4 max-w-80  py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                    <img src="./images/people.png" alt="">
+                    <div>
+                        <h3 class="text-4xl font-bold text-black mb-2">500K+</h3>
+                        <p class="text-para-primary text-lg font-normal">Registered users</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 max-w-80 py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                    <img src="./images/ticket-cupon.png" alt="">
+                    <div>
+                        <h3 class="text-4xl font-bold text-black mb-2">1.7 lacks</h3>
+                        <p class="text-para-primary text-lg font-normal">Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 max-w-80 py-8 px-10 rounded-3xl border border-b-4 border-b-primary-color bg-white">
+                    <img src="./images/stoppage.png" alt="">
+                    <div>
+                        <h3 class="text-4xl font-bold text-black mb-2">80K+</h3>
+                        <p class="text-para-primary text-lg font-normal">Rental partners</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    <main></main>
+    <footer></footer>
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/ticketing.js"></script>
 </body>
 
 </html>
