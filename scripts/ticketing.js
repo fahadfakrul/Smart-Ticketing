@@ -65,11 +65,7 @@ for (const btn of allbtn) {
 
 
 
-const couponConfirm = document.getElementById("coupon-confirm");
- document.getElementById("coupon-holder").addEventListener("keyup",function(event){
-    const text =event.target.value;
-    
- }) 
+
 
 function setInnerText(id, value) {
   document.getElementById(id).innerText = value;
@@ -109,7 +105,17 @@ function grandTotalCost(){
             couponConfirm.setAttribute('disabled',true);
         }
      })
+   
+    
+
+
 }
+  function nextpage(){
+       
+        hideElementById("navbar");
+        hideElementById("home-screen");
+        showElementById("confirm");
+      }
 
 function discount(num){
     const totalCost = parseInt( document.getElementById("total-cost").innerText);
@@ -124,4 +130,12 @@ function setBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-primary-color text-white');
     
+}
+function hideElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('hidden');
+}
+function showElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden');
 }
