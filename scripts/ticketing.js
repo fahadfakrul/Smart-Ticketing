@@ -107,6 +107,10 @@ function nextpage() {
   showElementById("confirm");
 }
 
+function continuepage(){
+  window.location.reload();
+}
+
 function discount(num) {
   const totalCost = parseInt(document.getElementById("total-cost").innerText);
   const amount = parseFloat(num);
