@@ -6,8 +6,23 @@
     padding: 0;
 }
 
-
+.font-raleway{
+    font-family: "Raleway", sans-serif;
+}
 .font-inter{
     font-family: "Inter", sans-serif;
 
+}
+
+.title-seat{
+    color: #030712;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.title-details{
+color:  #030712;
+font-family: Inter;
+font-size: 16px;
+font-weight: 600;
 }
