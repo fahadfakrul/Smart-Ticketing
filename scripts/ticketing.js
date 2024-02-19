@@ -79,7 +79,7 @@ function grandTotalCost() {
   const coupon2 = document.getElementById("coupon2").innerText;
   const couponConfirm = document.getElementById("coupon-confirm");
   setInnerText("grand-total", totalCost);
-
+  const couponHolder = document.getElementById("coupon-holder");
   document
     .getElementById("coupon-holder")
     .addEventListener("keyup", function (event) {
@@ -90,12 +90,16 @@ function grandTotalCost() {
         couponConfirm.addEventListener("click", function () {
           const grandTotal = discount(15);
           setInnerText("grand-total", grandTotal);
+          couponConfirm.classList.add("hidden");
+          couponHolder .classList.add("hidden");
         });
       } else if (text === coupon2) {
         couponConfirm.removeAttribute("disabled");
         couponConfirm.addEventListener("click", function () {
           const grandTotal = discount(20);
           setInnerText("grand-total", grandTotal);
+          couponConfirm.classList.add("hidden");
+          couponHolder .classList.add("hidden");
         });
       } else {
         couponConfirm.setAttribute("disabled", true);
