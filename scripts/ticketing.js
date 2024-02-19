@@ -5,6 +5,7 @@ let seatLeft = 40;
 
 for (const btn of allbtn) {
   btn.addEventListener("click", function (event) {
+    btn.classList.add("pointer-events-none");
     count = count + 1;
     seatLeft = seatLeft - 1;
     event.target.classList.add("bg-primary-color", "text-white", "selected");
@@ -107,7 +108,7 @@ function nextpage() {
   showElementById("confirm");
 }
 
-function continuepage(){
+function continuepage() {
   window.location.reload();
 }
 
