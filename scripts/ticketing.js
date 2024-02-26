@@ -112,6 +112,11 @@ function nextpage() {
   showElementById("confirm");
 }
 
+function nooffers() {
+  hideElementById("navbar");
+  hideElementById("home-screen");
+  showElementById("all-offer");
+}
 function continuepage() {
   window.location.reload();
 }
