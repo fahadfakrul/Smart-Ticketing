@@ -270,8 +270,10 @@
                         <div class=" seats ">
                             <!-- seat div-->
                             <div class="flex justify-between px-8 mt-10">
-                                <a onclick="continuepage()" href="#booking-seat"><div><button class="btn px-9 "><img src="./images/reset.png" alt=""></button>
-                                </div></a>
+                                <a onclick="continuepage()" href="#booking-seat">
+                                    <div><button class="btn px-9 "><img src="./images/reset.png" alt=""></button>
+                                    </div>
+                                </a>
                                 <div><button class="btn px-9 "><img src="./images/steering-wheel.png" alt=""></button>
                                 </div>
                             </div>
@@ -388,17 +390,19 @@
 
                             </div>
                         </div>
-                        <h2 class="title-details">Passenger Name*</h2>
-                        <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="text"
-                            placeholder="Enter your name">
-                        <h2 class="title-details ">Phone Number*</h2>
-                        <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="text"
-                            placeholder="Enter your phone number">
-                        <h2 class="title-details ">Email ID</h2>
-                        <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="text"
-                            placeholder="Enter your email id">
-                        <button onclick="nextpage()" class="btn text-white bg-primary-color w-full
-                        text-xl font-extrabold">Next</button>
+                        <form id="booking-form" method="post" action="index.php">
+                            <h2 class="title-details">Passenger Name*</h2>
+                            <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="text"
+                                placeholder="Enter your name" name="passengername">
+                            <h2 class="title-details">Phone Number*</h2>
+                            <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="text"
+                                placeholder="Enter your phone number" name="number">
+                            <h2 class="title-details">Email ID</h2>
+                            <input class="border border-[#0307121A] rounded-xl w-full p-3 my-3" type="email"
+                                placeholder="Enter your email id" name="email">
+                            <button class="btn text-white bg-primary-color w-full text-xl font-extrabold" type="submit"
+                                name="submit">Next</button>
+                        </form>
                         <div class="flex justify-around mt-2">
                             <small> <a class="text-para-primary " href="./terms-and-conditions.html"
                                     target="_blank"><u>Terms and Conditions</u></a></small>
@@ -412,7 +416,7 @@
 
 
     </main>
-    <section id="confirm" class="hidden">
+    <!-- <section id="confirm" class="hidden">
         <div class="bg-[#F2F1F1] min-h-screen flex justify-center items-center ">
             <div class="max-w-3xl bg-white flex flex-col justify-center text-center items-center rounded-2xl p-9 gap-3">
                 <img class="h-28 w-24" src="./images/success.png" alt="">
@@ -424,7 +428,7 @@
                     class="btn text-xl font-semibold text-white bg-[#27AE60] rounded-3xl px-24">Continue</button>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- all offer coupon section-->
     <section id="all-offer" class="hidden">
         <div class="bg-[#F2F1F1] min-h-screen flex justify-center items-center ">
@@ -445,7 +449,7 @@
     <footer>
 
     </footer>
-   
+
     <script src="scripts/ticketing.js"></script>
 </body>
 

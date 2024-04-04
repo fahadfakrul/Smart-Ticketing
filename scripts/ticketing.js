@@ -106,11 +106,11 @@ function grandTotalCost() {
       }
     });
 }
-function nextpage() {
-  hideElementById("navbar");
-  hideElementById("home-screen");
-  showElementById("confirm");
-}
+// function nextpage() {
+//   hideElementById("navbar");
+//   hideElementById("home-screen");
+//   showElementById("confirm");
+// }
 
 function nooffers() {
   hideElementById("navbar");
